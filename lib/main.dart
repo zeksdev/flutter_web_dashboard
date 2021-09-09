@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'layout.dart';
 
@@ -16,9 +18,11 @@ class MyApp extends StatelessWidget {
       title: 'Dashboard',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Layout(),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: light,
+          textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
+              .apply(bodyColor: Colors.black)),
+      home: Layout(),
     );
   }
 }
