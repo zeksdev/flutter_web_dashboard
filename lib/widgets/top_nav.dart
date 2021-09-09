@@ -57,7 +57,7 @@ AppBar topNav(BuildContext context, GlobalKey<ScaffoldState> key) => AppBar(
                 child: Container(
                   width: 12,
                   height: 12,
-                  //padding: const EdgeInsets.all(4),
+                  padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
                     color: active,
                     borderRadius: BorderRadius.circular(30),
@@ -66,6 +66,13 @@ AppBar topNav(BuildContext context, GlobalKey<ScaffoldState> key) => AppBar(
                 ),
               )
             ],
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: CircleAvatar(
+              backgroundColor: light,
+              backgroundImage: const AssetImage("assets/images/profile.jpg"),
+            ),
           )
         ],
       ),
